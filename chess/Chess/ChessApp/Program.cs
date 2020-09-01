@@ -7,7 +7,12 @@ namespace ChessApp
     {
         static void Main(string[] args)
         {
-            int j= 1;
+            // Rita ett schackbräde med hjälp av dessa två tecken ░ ▓.
+            // Använd gärna metoder för att lösa problemet.
+            // Man behöver använda % (modulo)
+
+
+            int j = 1;
             int i = 0;
             Console.WriteLine("▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░");
             Console.Write("░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓\n▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░\n░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓\n▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░\n░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓\n▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░\n░░░▓▓▓░░░▓▓▓░░░▓▓▓░░░▓▓▓");

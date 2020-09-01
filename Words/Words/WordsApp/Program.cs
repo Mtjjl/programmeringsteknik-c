@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace WordsApp
 {
@@ -6,19 +7,51 @@ namespace WordsApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Skriv en konsolapplikation som tar emot en skriven text.
+            Console.WriteLine("Enter a string, preferrably containing a sentence.");
 
-            /*
-             * skriv en konsolappapplikation som tar emot en skriven text 
-             * 
-             * vill ha följande;
-             * Anntal ord?
-             * antal vokaler?
-             * vilket är det längsta ordet
-             * 
-             * Word count
-             * vowel count
-             * longest word*/
+            char[] vowels = new char[] { 'a', 'o', 'i', 'e', 'u', 'y', 'å', 'ä', 'ö' };
+
+            string enteredString = Console.ReadLine();
+            string lowercaseString = enteredString.ToLower();
+            
+            string[] words = lowercaseString.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            int vowelCount = 0;
+            int wordCount = words.Length;
+            string longestWord = string.Empty;
+
+
+            // Dubbel foreach-loop
+            foreach (var word in words)
+            {
+                foreach (var character in word)
+                {
+                    if (vowels.Contains(character))
+                    {
+                        vowelCount++;
+                    }
+                }
+
+                if (word.Length > longestWord.Length)
+                {
+                    longestWord = word;
+                }
+            }
+
+            // Man kan även loopa strängar på detta sätt
+            for (var i = 0; i < enteredString.Length; i++)
+            {
+                var character = enteredString[i];
+            }
+
+            // Vi vill ha ut följande:
+            // Antal ord?
+            // Antal vokaler?
+            // Vilket är det längsta ordet?
+
+            Console.WriteLine("Word count: " + wordCount);
+            Console.WriteLine("Vowel count: " + vowelCount);
+            Console.WriteLine("Longest word: " + longestWord + ", " + longestWord.Length + " characters.");
         }
     }
 }

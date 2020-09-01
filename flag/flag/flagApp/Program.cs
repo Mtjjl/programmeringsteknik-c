@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace flagApp
+namespace FlagApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Skapa en applikation som ritar ut svenska flaggan
+            // Använd metoder för att göra utritningen generell
         }
     }
 }
